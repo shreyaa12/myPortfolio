@@ -85,10 +85,10 @@ const AboutSection = () => {
 
   return (
     <section className="text-primary" id="about">
-        <h2 className="text-4xl font-bold text-primary mt-4 md:mb-6 pb-2 border-b-2 border-primary">Skills</h2>
+        <h2 className="text-4xl font-bold text-primary mt-4 mb-4 md:mb-6 pb-2 border-b-2 border-primary">Skills</h2>
       {/* <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16"> */}
-        <div className="text-left flex flex-col h-full">
-          <div className="flex flex-row justify-start ">
+        <div className="text-left flex flex-col h-full md:space-x-8 ">
+          <div className="flex flex-row flex-wrap justify-start md:space-x-4">
             <TabButton
               selectTab={() => handleTabChange("frontend")}
               active={tab === "frontend"}
@@ -110,7 +110,7 @@ const AboutSection = () => {
               {" "}
               Other{" "}
             </TabButton>
-            <TabButton
+            {/* <TabButton
               selectTab={() => handleTabChange("education")}
               active={tab === "education"}
             >
@@ -123,7 +123,8 @@ const AboutSection = () => {
             >
               {" "}
               Certifications{" "}
-            </TabButton>
+            </TabButton> */}
+           
           </div>
           <div className="mt-8">
             {TAB_DATA.find((t) => t.id === tab).content}

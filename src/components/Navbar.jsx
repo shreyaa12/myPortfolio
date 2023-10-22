@@ -18,6 +18,10 @@ const navLinks = [
     {
         title:"Contact",
         path:"#contact"
+    },
+    {
+        title:"Resume",
+        path:""
     }
 ]
 
@@ -26,8 +30,8 @@ const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
   return (
-    <nav className='fixed  mx-auto border border-[#33353F] top-0 left-0 right-0 z-10 bg-[#121212] bg-opacity-100'>
-        <div className='flex container lg:py-4 flex-wrap items-center justify-between mx-auto px-12 py-4 mt-3'>
+    <nav className='fixed mx-auto border border-[#33353F] top-0 left-0 right-0 z-10 bg-[#121212] bg-opacity-90'>
+        <div className='flex container lg:py-4 flex-wrap items-center justify-between mx-auto px-10 py-4 mt-3'>
             <Link href={"/"} className='tex-2xl md:text-5xl text-[#ece2e2] font-semibold'>&lt;/&gt; Shreya Gokani</Link>
             <div className='mobile-menu block md:hidden'>
             {!navbarOpen ? (
