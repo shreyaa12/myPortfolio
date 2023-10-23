@@ -4,9 +4,10 @@ import LinkedinIcon from 'public/linkedin-icon.svg'
 import GithubIcon from 'public/github-icon.svg'
 import Link from "next/link";
 import Image from "next/image";
+import Alert from "./Alert";
 
 const EmailSection = () => {
-  const [emailSubmitted, setEmailSubmitted] = useState(false);
+  const [emailSubmitted, setEmailSubmitted] = useState('');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -32,11 +33,11 @@ const EmailSection = () => {
 
     const response = await fetch(endpoint, options);
     const resData = await response.json();
-    console.log(resData);
-
     if (response.status === 200) {
-      console.log("Message sent.");
       setEmailSubmitted(true);
+    }
+    else{
+      setEmailSubmitted(false);
     }
   };
 
@@ -66,12 +67,7 @@ const EmailSection = () => {
         </div>
       </div>
       <div>
-        {emailSubmitted ? (
-          <p className="text-green-500 text-sm mt-2">
-            Email sent successfully!
-          </p>
-        ) : (
-          <form className="flex flex-col" onSubmit={handleSubmit}>
+      <form className="flex flex-col" onSubmit={handleSubmit}>
             <div className="mb-6">
               <label
                 htmlFor="email"
@@ -125,7 +121,7 @@ const EmailSection = () => {
               Send Message
             </button>
           </form>
-        )}
+        {emailSubmitted && (<Alert success={true}/>)}
       </div>
     </section>
   );

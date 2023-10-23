@@ -12,6 +12,7 @@ const projectData = [
         tag: ["All", "Web"],
         gitUrl: "/",
         previewUrl: "https://www.newhomeincalgary.ca/",
+        technology:['Next.js','React.js', 'MongoDB', 'Node.js']
       },
       {
         id: 2,
@@ -20,7 +21,8 @@ const projectData = [
         image: "/images/projects/feedback.png",
         tag: ["All", "Web"],
         gitUrl: "https://github.com/shreyaa12/feedback-app/tree/master/feedback-app",
-        previewUrl: "/",
+        previewUrl: "https://feedback-app-olive-seven.vercel.app/",
+        technology:['React.js', 'Restful API','CSS','JSON']
       },
       {
         id: 3,
@@ -30,6 +32,8 @@ const projectData = [
         tag: ["All", "Web"],
         gitUrl: "https://github.com/shreyaa12/CarRental/tree/master/car_showcase",
         previewUrl: "/",
+        technology:['Next.js','React.js', 'MongoDB', 'Node.js']
+
       },
       {
         id: 4,
@@ -38,7 +42,8 @@ const projectData = [
         image: "/images/projects/coffeeShop.png",
         tag: ["All", "Mobile"],
         gitUrl: "https://github.com/shreyaa12/CoffeeShopSystem/tree/features/CoffeeProduct",
-        previewUrl: "/",
+        previewUrl: "https://coffee-shop-system.vercel.app/coffees",
+        technology:['Angular 14','NgRx', 'MongoDB', 'Node.js']
       },
       {
         id: 5,
@@ -48,6 +53,7 @@ const projectData = [
         tag: ["All", "Mobile"],
         gitUrl: "https://github.com/shreyaa12/SpaceXLaunch",
         previewUrl: "/",
+        technology:['HTML','CSS', 'Responsive UI']
       },
       
 ]
@@ -77,7 +83,7 @@ const ProjectSection = () => {
           >
           <ProjectCard key={project.id} title={project.title} 
           description={project.description} imgUrl={project.image} 
-          gitUrl={project.gitUrl}  previewUrl={project.previewUrl}
+          gitUrl={project.gitUrl}  previewUrl={project.previewUrl} technology={project.technology}
           />
           </motion.li>
         )}

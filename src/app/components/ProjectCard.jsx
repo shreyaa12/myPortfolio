@@ -2,7 +2,7 @@ import React from 'react'
 import {CodeBracketIcon,EyeIcon} from '@heroicons/react/24/outline';
 import Link from 'next/link';
 
-const ProjectCard = ({imgUrl,title,description,gitUrl,previewUrl}) => {
+const ProjectCard = ({imgUrl,title,description,gitUrl,previewUrl,technology}) => {
   return (
    <div>
     <div className="h-52 md:h-72 rounded-t-xl relative group" style={{background:`url(${imgUrl})`,backgroundSize:"cover"}}>
@@ -18,7 +18,13 @@ const ProjectCard = ({imgUrl,title,description,gitUrl,previewUrl}) => {
     </div>
     <div className='text-primary rounded-b-xl bg-[#181818] py-6 px-4 '>
         <h5 className='text-xl font-semibold mb-2'>{title}</h5>
-        <p className='text-primary'>{description}</p>
+        {/* <p className='text-primary'>{description}</p> */}
+        <ul className='mt-2  flex flex-row space-x-2'> {/* flex-1 for the list */}
+        {technology.map((tech, index) => (
+                <li key={index}>{tech}</li>
+            ))}
+           
+        </ul>
     </div>
     </div>
   )
