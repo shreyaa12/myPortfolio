@@ -31,7 +31,7 @@ const projectData = [
         image: "/images/projects/carRental.png",
         tag: ["All", "Web"],
         gitUrl: "https://github.com/shreyaa12/CarRental/tree/master/car_showcase",
-        previewUrl: "/",
+        previewUrl: "https://car-rental-plum.vercel.app/",
         technology:['Next.js','React.js', 'MongoDB', 'Node.js']
 
       },
