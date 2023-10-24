@@ -8,7 +8,11 @@ module.exports = {
   ],
   theme: {
     extend: {
+      // backgroundImage: {
+      //   circularLight: 'repeating-radial-gradient(rgba(255,255,255,0.4) 2px, #000000 5px, #000000 100px);'
+      // },
     },
+
     colors: {
       ...colors,
       primary: '#ece2e2',
@@ -17,6 +21,8 @@ module.exports = {
         400:'#fbbf24'
       },
     },
+    
   },
+ 
   plugins: [],
 }
