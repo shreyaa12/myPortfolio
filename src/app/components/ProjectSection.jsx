@@ -43,7 +43,7 @@ const projectData = [
         tag: ["All", "Mobile"],
         gitUrl: "https://github.com/shreyaa12/CoffeeShopSystem/tree/features/CoffeeProduct",
         previewUrl: "https://coffee-shop-system.vercel.app/coffees",
-        technology:['Angular 14','NgRx', 'MongoDB', 'Node.js']
+        technology:['Angular14','NgRx', 'MongoDB', 'Node.js']
       },
       {
         id: 5,

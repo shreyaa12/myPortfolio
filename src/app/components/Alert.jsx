@@ -14,7 +14,7 @@ export default function Alert({success}) {
         </div>
         <div className="ml-3">
           <h3 className={`text-sm font-medium ${success ? 'text-green-800' : 'text-red-800'}`}><span className="mt-2 text-sm text-green-700">
-          {success ?<span>Thank You, for contacting us!</span>: <span>Sorry! There was an error while sending the email! Please try again later.</span>}</span></h3> 
+          {success ?<span>Thank You, for contacting me!</span>: <span>Sorry! There was an error while sending the email! Please try again later.</span>}</span></h3> 
         </div>
       </div>
     </div>

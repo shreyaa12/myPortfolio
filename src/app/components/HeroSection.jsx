@@ -1,54 +1,65 @@
-"use client"
-import React from 'react'
-import Image from 'next/image';
-import { TypeAnimation } from 'react-type-animation';
+"use client";
+import React from "react";
+import Image from "next/image";
+import { TypeAnimation } from "react-type-animation";
+import { motion } from "framer-motion";
+import { useMediaQuery } from 'react-responsive';
 
 const HeroSection = () => {
+  const isSmallScreen = useMediaQuery({ maxWidth: 768 });
   return (
-    <section className='lg:py-16'>
-        <div className='grid grid-cols-1 sm:grid-cols-12'>
-        <div className='col-span-7 place-self-center text-center sm:text-left justify-self-start' style={{ minHeight: '200px', width: '300px' }}>
-        <h1 className='text-primary mb-4 text-4xl sm:text-5xl lg:text-6xl  font-extrabold'>
-            <span className='text-transparent bg-clip-text bg-gradient-to-r from-secondary-400 to-primary'>Hello, I am{" "}</span>
-            <br/>
+    <section className="lg:py-16" id="hero">
+      <div className="grid grid-cols-1 sm:grid-cols-12">
+        <motion.div
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ opacity: 1, scale: 1}}
+          transition={{ duration: 0.5 }}
+          className="col-span-8 place-self-center text-center sm:text-left md:justify-self-start justify-self-center" 
+        >
+         <div className="text-primary text-4xl sm:text-5xl lg:text-6xl lg:leading-normal font-extrabold">
+            <div className="text-transparent bg-clip-text bg-gradient-to-r from-secondary-400 to-primary">
+              Hello, I&apos;m{" "}
+            </div>
+          </div>
+          <h1 className="text-primary text-4xl sm:text-5xl lg:text-6xl lg:leading-normal font-extrabold">
+            
             <TypeAnimation
-            sequence={[
-                // Same substring at the start will only be typed out once, initially
+              sequence={[
+                "Shreya",
+                1000,
                 'a Full-Stack Developer 🚀',
                 1000,
                 'a Continuous Learner 📚',
                 1000,
                 'a Hiker 🏞️',
-                1000
-            ]}
-            wrapper="span"
-            speed={50}
-            repeat={Infinity}
+                1000,
+              ]}
+              wrapper="span"
+              speed={isSmallScreen ? 0 : 50}
+              repeat={Infinity}
             />
-        </h1>
-        {/* <p className='text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl'>Passionate Full Stack Developer, Fueling Success through Perpetual Learning and Innovation!</p> */}
-        {/* <div>
-            <button className='px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-[#ece2e2] hover:bg-slate-200 text-black'>Hire Me</button>
-            <button className='px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-transparent hover:bg-slate-800 text-primary border border-white mt-3'>Download Resume</button>
-        </div> */}
-
-        </div>
-        
-       <div className='col-span-5 place-self-center mt-4 lg:mt-0'>
-       <div className="w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
-       <Image
+          </h1>
+          
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+          className="col-span-4 place-self-center mt-4 lg:mt-0"
+        >
+          <div className="rounded-full bg-[#181818] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
+            <Image
               src="/images/Profile.jpg"
-              alt="profile image"
-              className="rounded-full absolute"
+              alt="Profile image"
+              className="rounded-full absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
               width={300}
               height={300}
-              priority
             />
-       </div>
-       </div>
-       </div>
+          </div>
+        </motion.div>
+      </div>
     </section>
-  )
-}
+  );
+};
 
 export default HeroSection;

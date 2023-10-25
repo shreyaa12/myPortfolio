@@ -89,10 +89,20 @@ const AboutSection = () => {
       {/* <div className="md:grid md:grid-cols-1 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16"> */}
         {/* <Image src="/images/about-image.png" width={500} height={500} alt="About" /> */}
         <div className="mt-4 md:mt-0 text-left flex flex-col flex-wrap h-full">
-        <h2 className="text-4xl font-bold text-primary mt-4 mb-4 md:mb-6 pb-2 border-b-2 border-primary">About Me</h2>
-          <p className="text-base lg:text-lg text-wrap">
-          I enjoy being in nature, and Calgary is an ideal destination for nature enthusiasts and mountain lovers. I find immense joy in activities such as hiking, camping, observing nature, and witnessing the beauty of a sunrise. There&apos;s a sense of fulfillment that comes from contributing to the community, which is why I volunteer as part of the Front Desk Membership Services team at the YMCA. Additionally, I&apos;m a member of the Calgary Software Crafters Club, which believes in Test Driven Development and promotes it by organizing free events and Coderetreats.
-          </p>
+          <h2 className="text-4xl font-bold text-primary mt-4 mb-4 md:mb-6 pb-2 border-b-2 border-primary">About Me</h2>
+          <div className="text-base lg:text-lg text-wrap space-y-3">
+            <p className="text-primary"><span className="text-secondary-100 font-semibold">🌟Hello, I&apos;m Shreya Gokani,</span> a Code Sorcerer hailing from the enchanting landscapes of Calgary, Canada.</p>
+            <p className="mt-3 text-primary"><span className="text-secondary-100 font-semibold">🏞️Nature Enthusiast</span> My heart finds solace in the midst of mountains and the beauty of the natural world. Beyond my coding spells, I&apos;m an avid mountain lover and passionate nature enthusiast.</p>
+
+            <p className="mt-3 text-primary"><span className="text-secondary-100 font-semibold">🤝YMCA Volunteer </span> I proudly don the cape of a YMCA volunteer with a heart of gold, dedicating my time and skills to give back to the community and witness the positive impact we create together.</p>
+
+            <p className="mt-3 text-primary"><span className="text-secondary-100 font-semibold">🎓Emerging Leaders Program Graduate </span> I am honored to be a graduate of the prestigious Emerging Leaders Program at Mount Royal University, Calgary, AB. This program has been a transformative journey, honing my leadership skills and instilling a deeper sense of purpose in me.</p>
+
+            <p className="mt-3 text-primary"><span className="text-secondary-100 font-semibold">🚀Calgary Software Crafters Organizer </span>As an organizer at the Calgary Software Crafters Club, I&apos;m devoted to pushing tech boundaries and fostering a culture where creativity and innovation flourish. We&apos;re firm believers that sharing knowledge is the heart of our collective coding journey.</p>
+
+            <p className="mt-3 text-primary">My journey is a harmonious blend of digital magic and the wonders of the great outdoors.</p>
+          </div>
+
           <div className="flex flex-row flex-wrap justify-start mt-8">
             <TabButton
               selectTab={() => handleTabChange("frontend")}
