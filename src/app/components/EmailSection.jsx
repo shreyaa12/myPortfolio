@@ -156,6 +156,7 @@ const EmailSection = () => {
       // Tell the server we're sending JSON.
       headers: {
         "Content-Type": "application/json",
+        'Authorization': `Bearer ${process.env.SENDGRID_API_KEY}`,
       },
       // Body of the request is the JSON data we created above.
       body: JSON.stringify(data),
