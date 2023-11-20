@@ -45,12 +45,19 @@ export async function POST(req, res) {
 
     const msg = {
       to: TO_EMAIL,
-      from: {
-        email: email,
-        name: name,
-      },
+      from: TO_EMAIL,
+      cc:email,
       subject: 'Contact Inquiry',
-      html: `<h1>${name}</h1><p>Thank you for contacting us!</p><p>New message submitted:</p><p>${message}</p>`,
+      html: `<h1>Hello ${name},</h1>
+      <p>Thank you for contacting me!</p>
+      <p>I will reach out to you as soon as possible.</p>
+      <p><strong>Details:</strong></p>
+      <ul>
+        <li><strong>Name:</strong> ${name}</li>
+        <li><strong>Email:</strong> ${email}</li>
+        <li><strong>Message:</strong> ${message}</li>
+      </ul>
+      <p>Best regards,<br>Shreya Gokani</p>`,
     };
 
     const data = await sgMail.send(msg);

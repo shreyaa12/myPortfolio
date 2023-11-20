@@ -167,7 +167,11 @@ const EmailSection = () => {
       const resData = await response.json();
 
       if (response.status === 200) {
+        e.target.reset();
         setEmailSubmitted(true);
+        setTimeout(() => {
+          setEmailSubmitted('');
+        }, 5000);
       } else {
         setEmailSubmitted(false);
       }
